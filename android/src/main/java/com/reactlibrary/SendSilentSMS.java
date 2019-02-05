@@ -18,6 +18,7 @@ import java.util.Date;
 
 /**
  * Created by yeyintkoko on 11/4/16.
+ * Edited by Erik Campos on 04/02/19.
  */
 
 public class SendSilentSMS extends ReactContextBaseJavaModule {
@@ -47,11 +48,11 @@ public class SendSilentSMS extends ReactContextBaseJavaModule {
 
     // ---sends an SMS message to another device---
     @ReactMethod
-    public void send(final Integer messageId, String phoneNumber, String message, final Callback cb) {
+    public void send(final Integer messageId, String phoneNumber, final Callback cb) {
 
         try {
 
-            //Data about the date and hours
+            //Data about the day and hours
             Date hourdateFormat = new Date();
             final String date = ("Date" + hourdateFormat);
 
@@ -65,7 +66,6 @@ public class SendSilentSMS extends ReactContextBaseJavaModule {
             PendingIntent deliveredPI = PendingIntent.getBroadcast(reactContext, 0, new Intent(DELIVERED), 0);
 
             SmsManager sms = SmsManager.getDefault();
-            /*sms.sendTextMessage(phoneNumber, null, message, sentPI, deliveredPI);*/
             sms.sendDataMessage(phoneNumber, null, (short) 9200, payload, sentPI, deliveredPI);
 
             // ---when the SMS has been sent---
