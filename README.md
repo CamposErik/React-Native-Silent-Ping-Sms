@@ -1,5 +1,5 @@
 
-# react-native-silent-ping-sms
+# React Native Silent Ping SMS
 
 ## Table of contents
 
