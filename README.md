@@ -27,14 +27,6 @@
 
 ### Manual installation
 
-
-#### iOS
-
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-silent-ping-sms` and add `RNSilentPingSms.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNSilentPingSms.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
-
 #### Android
 
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
@@ -49,14 +41,15 @@
   	```
       implementation project(':react-native-silent-ping-sms')
   	```
+4.  Insert the following lines inside the AndroidManifest.xml in `android/app/src/main/AndroidManifest.xml`:
+    ```
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    ```
 
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
 
-1. In Visual Studio add the `RNSilentPingSms.sln` in `node_modules/react-native-silent-ping-sms/windows/RNSilentPingSms.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Silent.Ping.Sms.RNSilentPingSms;` to the usings at the top of the file
-  - Add `new RNSilentPingSmsPackage()` to the `List<IReactPackage>` returned by the `Packages` method
+
 
 
 ## Usage
@@ -64,7 +57,7 @@
 import RNSilentPingSms from 'react-native-silent-ping-sms';
 
 // you can put any number as Id to identify which message being process
-    SendSilentSms.send(123, "(Numberphone)", (msg)=>{alert(msg)});
+    SendSilentSms.send(123, "Numberphone", (msg)=>{alert(msg)});
 
 ```
   
