@@ -1,19 +1,47 @@
 {
-  "name": "react-native-silent-ping-sms",
-  "version": "1.2.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "react-native-silent-ping-sms",
+  "_id": "react-native-silent-ping-sms@1.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-q36JlIQFN4wPpO0a15tnpnGnhxf+jUihtFEMfanVeB8BWIjcOo4t5+CEgoV6wmFW3WoIe3LLIjM6d9ByqiWnBQ==",
+  "_location": "/react-native-silent-ping-sms",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-native-silent-ping-sms",
+    "name": "react-native-silent-ping-sms",
+    "escapedName": "react-native-silent-ping-sms",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-silent-ping-sms/-/react-native-silent-ping-sms-1.2.0.tgz",
+  "_shasum": "36c2b8e24260d6e7dbb5a7202a413880339e29bc",
+  "_spec": "react-native-silent-ping-sms",
+  "_where": "C:\\Users\\erikc\\FlyveMDM\\MyAwesomeProject",
+  "author": {
+    "name": "Erik Campos"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "- Does not require rooted device   - SMS will not be delivered as standard SMS, target user will receive no visual notification about SMS being received",
+  "email": "ecampos@teclib.com",
   "keywords": [
     "react-native"
   ],
-  "author": "Erik Campos",
-  "email": "ecampos@teclib.com",
   "license": "",
+  "main": "index.js",
+  "name": "react-native-silent-ping-sms",
   "peerDependencies": {
     "react-native": "^0.41.2",
     "react-native-windows": "0.41.0-rc.1"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.2.0"
 }

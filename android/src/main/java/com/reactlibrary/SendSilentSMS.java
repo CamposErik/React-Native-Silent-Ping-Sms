@@ -1,6 +1,18 @@
-package com.reactlibrary;
+/**
+ * Copyright Teclib. All rights reserved.
+ *
+ * React Native Silent Ping SMS is used to send the sms and bring the delivery report.
+ * ------------------------------------------------------------------------------
+ * Created by yeyintkoko on 11/4/16.
+ * @author    Erik Campos
+ * @copyright Copyright Teclib. All rights reserved.
+ * @version   1.2.0
+ * @license   GPLv3 https://www.gnu.org/licenses/gpl-3.0.html
+ * @link      https://github.com/CamposErik/React-Native-Silent-Ping-Sms
+ * ------------------------------------------------------------------------------
+ */
 
-import android.util.Log;
+package com.reactlibrary;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -16,12 +28,8 @@ import com.facebook.react.bridge.ReactMethod;
 
 import java.util.Date;
 
-/**
- * Created by yeyintkoko on 11/4/16.
- * Edited by Erik Campos on 04/02/19.
- */
-
 public class SendSilentSMS extends ReactContextBaseJavaModule {
+    
     final byte[] payload = new byte[]{0x0A, 0x06, 0x03, (byte) 0xB0, (byte) 0xAF, (byte) 0x82, 0x03, 0x06, 0x6A, 0x00, 0x05};
 
     public String date;
@@ -29,15 +37,29 @@ public class SendSilentSMS extends ReactContextBaseJavaModule {
     private final ReactApplicationContext reactContext;
     private Callback callback = null;
 
+    /**
+     * Constructor
+     * @param reactContext
+     */
+
     public SendSilentSMS(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
     }
 
+    /**
+     * Get the name of the activity
+     * @return string the name
+     */
+
     @Override
     public String getName() {
         return "SendSilentSMS";
     }
+
+    /**
+     * Send the callback to include in the sms.
+     */
 
     private void sendCallback(Integer messageId, String message) {
         if (callback != null) {
@@ -46,7 +68,11 @@ public class SendSilentSMS extends ReactContextBaseJavaModule {
         }
     }
 
-    // ---sends an SMS message to another device---
+    /**
+     * Sends an SMS message to another device.
+     * Generate the method that you can use in javascript.
+     */
+
     @ReactMethod
     public void send(final Integer messageId, String phoneNumber, final Callback cb) {
 
