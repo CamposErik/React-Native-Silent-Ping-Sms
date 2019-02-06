@@ -21,7 +21,7 @@ The react native silent ping sms will send a silent sms to another device and th
   - Does not require rooted device
   - SMS will not be delivered as standard SMS, target user will receive no visual notification about SMS being received
   - Payload looks like this: `byte[]{0x0A, 0x06, 0x03, (byte) 0xB0, (byte) 0xAF, (byte) 0x82, 0x03, 0x06, 0x6A, 0x00, 0x05}`
-	-It will show the delivery report at the java console log.
+  - It will show the delivery report at the java console log.
 
 ## Links
 
@@ -60,6 +60,7 @@ The react native silent ping sms will send a silent sms to another device and th
     ```
 
 ## Usage
+
 ```javascript
 import RNSilentPingSms from 'react-native-silent-ping-sms';
 
@@ -81,7 +82,7 @@ Want to file a bug, contribute some code, or improve documentation? Excellent! P
 
 ## Copying
 
-* **Name**: [Flyve MDM](https://flyve-mdm.com/) is a registered trademark of [Teclib'](http://www.teclib-edition.com/en/).
+* **Name**: [React Native Silent Ping SMS] is a registered trademark of [Teclib'](http://www.teclib-edition.com/en/).
 * **Code**: you can redistribute it and/or modify it under the terms of the GNU General Public License ([GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)).
 * **Documentation**: released under Attribution 4.0 International ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)).
 
