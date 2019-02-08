@@ -61,7 +61,7 @@ The react native silent ping sms will send a silent sms to another device and th
 
 ## Usage
 ```javascript
-import RNSilentPingSms from 'react-native-silent-ping-sms';
+import SilentPingSms from 'react-native-silent-ping-sms';
 
 // you can put any number as Id to identify which message being process
     SendSilentSms.send(123, "Numberphone", (msg)=>{alert(msg)});
